@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.nav-container {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #a0a7b1; /* Cor dos ícones inativos */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Estado Elevado (Padrão) */
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.1),
+                -7px -7px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* Estado Ativo/Pressionado (Como o Facebook na imagem) */
+.nav-item.active {
+    color: #3b5998; /* Exemplo: Cor da marca ativa */
+    box-shadow: inset 6px 6px 12px rgba(0, 0, 0, 0.1),
+                inset -6px -6px 12px rgba(255, 255, 255, 0.7);
+    transform: scale(0.96);
+}
+
+.nav-item:hover:not(.active) {
+    transform: translateY(-3px);
+    color: #666;
+}
